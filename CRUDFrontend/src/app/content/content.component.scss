@@ -1,0 +1,67 @@
+@import '../../scss/_mixins.scss';
+@import '../../scss/_placeholders.scss';
+#deleteInfo{
+    background-color: #444444;
+    border:1px solid black;
+    @include bodyBuilder(40vw, 15vh);
+    position: absolute;
+    left:30vw;
+    top:20vh;
+    text-align: center
+}
+#tak{
+    @extend %YesNoButtons;
+    background-color:red;
+    bottom: 0;
+    left: 0;
+    &:hover{
+        background-color: rgb(228, 32, 32);
+    }
+}
+#nie{
+    @extend %YesNoButtons;
+    bottom: 0;
+    right:0;
+    background-color: rgb(20, 160, 20);
+    &:hover{
+        background-color: rgb(41, 182, 41);
+    }
+}
+#ContentBox{
+    @include bodyBuilder(90vw, 95vh);
+    border:1px solid black;  
+    background-color:#888888;
+}
+
+table tr{
+    text-align: center;
+}
+
+table tr td {
+    height: 1.5rem;
+    font-size: 1.1em;
+}
+button{
+    cursor: pointer;
+    color:white;
+    border: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+#AddRow{
+    @include bodyBuilder(100%,1.9em);
+    background-color: rgba(17, 145, 17, 0.795);
+    font-size: 18px;
+    &:hover{
+        background-color: rgba(39, 168, 39, 0.795);;
+    }
+}
+
+.btn btn-primary{
+    width:100%;
+    height: 100%;
+}
+.table .thead-dark th{
+    background-color: #888888;
+}
+
+//add row Box

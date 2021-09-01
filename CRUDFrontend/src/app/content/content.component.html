@@ -1,0 +1,39 @@
+<!----flex 
+  pagin
+-->
+<div id ='deleteInfo' *ngIf='show'>
+    <h2>Czy na pewno chcesz usunąć ten rekord?</h2>
+    <button  class="btn btn-danger" (click)='deleteRow(this.wybranyFilm)'>Tak</button>
+    <button class="btn btn-success" (click)='toggle()'>Nie</button>
+</div>
+<div id ='ContentBox' >
+    <button id='AddRow' routerLink="Add">Dodaj rekord</button>
+    <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Tytul</th>
+      <th scope="col">Rezyser</th>
+      <th scope="col">Czas trwania</th>
+      <th scope="col">Data wydania</th>
+      <th scope="col">Ocena</th>
+      <th scope="col">Oparty na ksiazce</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = 'let film of filmy'>
+      <th scope="row">{{film.id}}</th>
+      <td>{{film.Tytul}}</td>
+      <td>{{film.Rezyser}}</td>
+      <td>{{film.Czas_trwania}}</td>
+      <td>{{film.Data_wydania}}</td>
+      <td>{{film.Ocena}}</td>
+      <td>{{film.Oparty_na_ksiazce}}</td>
+        <td><button class='btn btn-primary' routerLink='Film/{{film.id}}'>Modyfikuj</button></td>
+        <td><button class = 'btn btn-success' (click)='offerClicked(film);toggle()'>Usun</button></td>
+    </tr>
+  </tbody>
+</table>
+    
+
+</div>

@@ -1,0 +1,25 @@
+<div id = 'contentBox'>
+<br>
+<h1>Dodaj rekord</h1>
+<form>
+    <input type='text' placeholder='Tytul' [(ngModel)]='this.film.Tytul' name='Tytul'/>
+    <input type='text' placeholder='Rezyser' [(ngModel)]='this.film.Rezyser' name='Rezyser'/><br>
+    <input type='number' placeholder='Czas trwania' [(ngModel)]='this.film.Czas_trwania' name='Czas_trwania'/>
+    <input type='date' placeholder='Data wydania' [(ngModel)]='this.film.Data_wydania' name='Data_wydania'/><br>
+
+        <label for="Ocena">Ocena:</label>
+    <select name="Ocena" id="Ocena" [(ngModel)]='this.film.Ocena'>
+    <option value="A">Bardzo dobry</option>
+    <option value="B">Dobry</option>
+    <option value="C">Sredni</option>
+    <option value="D">Slaby</option>
+    <option value="E">Bardzo slaby</option>
+    <option value="F">Beznadziejny</option>
+    </select> 
+    <b>Oparty na książce:</b><input type='checkbox'[(ngModel)]='this.film.Oparty_na_ksiazce' name='Oparty_na_ksiazce'/>
+    <div id='buttonsCont'>
+    <button class='btn btn-primary' (click)='pojazdPost()'>Dodaj</button>
+    <button class='btn btn-success' (click)='back()'>Cofnij</button></div>
+</form>
+     
+</div>
